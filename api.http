@@ -1,0 +1,59 @@
+### Ruta principal (Devuelve un mensaje de bienvenida a la API).
+http://localhost:3000
+
+### Devuelve todos los productos. Permite filtrar por categoria.
+GET http://localhost:3000/productos
+
+### Mostrar los productos de cierta categoria.
+GET http://localhost:3000/productos?categoria=portátil
+
+### Devuelve un producto por su ID.
+GET http://localhost:3000/productos/6669cc9a3d8d1c915de280c8
+
+### Crea un nuevo producto.
+POST http://localhost:3000/productos
+content-type: application/json
+
+{
+    "id": 18,
+    "nombre": "Auriculares Fiio F3",
+    "importe": 10000,
+    "categoria": "Accesorios"
+    
+}
+
+### Elimina un producto por su ID.
+DELETE http://localhost:3000/productos/6669ddc6ec7c301114547bb8
+
+### Actualiza parcialmente un producto por su ID.   
+PATCH http://localhost:3000/productos/6669dc59498e236b98803312
+content-type: application/json
+{
+    "id": 22,
+    "importe": 22000
+}
+
+### Actualiza completamente un producto por su ID.
+PUT http://localhost:3000/productos/6669dc59498e236b98803312
+content-type: application/json
+
+{
+    "id": 23,
+    "importe": 23000,
+}
+
+### Devuelve los productos con un importe mayor al especificado.
+GET http://localhost:3000/productos/importes/mayor/744444.5
+
+### Devuelve los productos con un importe menor al especificado.
+GET http://localhost:3000/productos/importes/menor/550.5
+
+### Devuelve una lista de todas las categorías disponibles.
+GET http://localhost:3000/productos/categorias
+
+### Devuelve los productos que coinciden con el nombre especificado (búsqueda parcial).
+GET http://localhost:3000/productos/nombre/auri
+
+### Devuelve los productos cuyo importe esté dentro del rango especificado.
+GET http://localhost:3000/productos/rango/1500/20000
+

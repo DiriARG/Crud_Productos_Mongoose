@@ -1,0 +1,6 @@
+#Ignora carpeta node modules.
+node_modules/
+#Ignora archivo .env
+.env
+#Ignora README.md
+README.md
