@@ -7,6 +7,9 @@ GET http://localhost:3000/productos
 ### Mostrar los productos de cierta categoria.
 GET http://localhost:3000/productos?categoria=portátil
 
+### Devuelve una lista de todas las categorías disponibles.
+GET http://localhost:3000/productos/categorias
+
 ### Devuelve un producto por su ID.
 GET http://localhost:3000/productos/6669cc9a3d8d1c915de280c8
 
@@ -47,9 +50,6 @@ GET http://localhost:3000/productos/importes/mayor/744444.5
 
 ### Devuelve los productos con un importe menor al especificado.
 GET http://localhost:3000/productos/importes/menor/550.5
-
-### Devuelve una lista de todas las categorías disponibles.
-GET http://localhost:3000/productos/categorias
 
 ### Devuelve los productos que coinciden con el nombre especificado (búsqueda parcial).
 GET http://localhost:3000/productos/nombre/auri
