@@ -42,6 +42,21 @@ app.get("/productos", async (req, res) => {
   }
 });
 
+//Devuelve una lista de todas las categorías disponibles. 
+app.get("/productos/categorias", async (req, res) => {
+  try {
+    //Obtenemos todos los productos desde la BD.
+    const productos = await Producto.find();
+    //Extrae las categorías de los productos.
+    const categorias = productos.map((producto) => producto.categoria);
+    //Obtenemos las categorías únicas usando un Set.
+    const categoriasUnicas = [...new Set(categorias)];
+    res.json(categoriasUnicas);
+  } catch (error) {
+    console.error("Error al obtener las categorias: ", error);
+    res.status(500).send("Error al obtener las categorias");
+  }
+});
 
 //Devuelve un producto por su ID.
 app.get("/productos/:id", async (req, res) => {
@@ -144,7 +159,8 @@ app.get("/productos/importes/mayor/:importe", async (req, res) => {
     // Convertir el precio (Array/String) a float por si el usuario digita un número con coma. Siempre lo que ingrese el usuario va a ser un string, por eso se lo parsea en este caso.
     const precioNumerico = parseFloat(importe);
     const productos = await Producto.find({ importe: { $gt: precioNumerico } });
-    if (productos.length > 0) { //Se coloca .lenght mayor a 0 para que compruebe si el array tiene mas de un elemento y pase a ejecutarse la condición else en caso de que no se encuentre un producto con un precio mayor al definido.
+    if (productos.length > 0) {
+      //Se coloca .lenght mayor a 0 para que compruebe si el array tiene mas de un elemento y pase a ejecutarse la condición else en caso de que no se encuentre un producto con un precio mayor al definido.
       res.json(productos);
     } else {
       res.status(404).json({
@@ -172,18 +188,6 @@ app.get("/productos/importes/menor/:importe", async (req, res) => {
     }
   } catch (error) {
     res.status(500).json({ message: "Error al obtener los productos" });
-  }
-});
-
-//Devuelve una lista de todas las categorías disponibles. FALTA TERMINAR
-app.get("/productos/categorias", async (req, res) => {
-  try {
-    const lista = await Producto.aggregate([
-      { $project: { nombre_categoria: "$categoria", _id: 0 } },
-    ]);
-    res.json(lista);
-  } catch (error) {
-    res.status(500).json({ message: "Error al obtener la lista" });
   }
 });
 
