@@ -1,4 +1,4 @@
 MONGODB_URLSTRING = mongodb+srv://user:password@cluster0.qb0wb6t.mongodb.net/
-PORT = 3000
-DATABASE_NAME = nombreDB
-COLLECTION_NAME = nombrecoleccion
+PORT = EscribaElPuerto
+DATABASE_NAME = EscribaNombreDB
+COLLECTION_NAME = EscribaNombreColeccion
