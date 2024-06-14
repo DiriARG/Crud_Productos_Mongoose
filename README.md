@@ -1,5 +1,13 @@
-# Actividad: CRUD de productos con Mongoose
+# Actividad: CRUD de productos con Mongoose 🧐
 En este ejercicio se realiza una API REST utilizando Express JS y Mongoose para gestionar una colección de productos tecnológicos. La API permite realizar operaciones CRUD (Crear, Leer, Actualizar y Borrar) sobre los productos.
+
+## Desarrollador:
+Matías Di Risio 👍 
+- https://github.com/DiriARG
+
+## Previo a iniciar
+- Debemos crear una nueva base de datos en MongoDB Compass.
+- Luego importaremos el archivo .json llamado "productos.json" en nuestra base de datos haciendo click a "ADD DATA" --> "Import JSON or CSV file".
 
 ## Iniciando el proyecto
 - Abrimos la terminal e inicializamos un nuevo proyecto con `npm init -y`.
@@ -7,7 +15,7 @@ En este ejercicio se realiza una API REST utilizando Express JS y Mongoose para 
 
 ## Configuramos el archivo .env (Environment Variables):
 En este caso cambiamos el nombre del archivo llamado `.env copy` a `.env`, luego modificamos su contenido:
-- MONGODB_URLSTRING: Copiamos la cadena de conexion desde la pagina de MongoDB o propiamente en el MongoDB Compass.
+- MONGODB_URLSTRING: Copiamos la cadena de conexión desde la pagina de MongoDB o propiamente en el MongoDB Compass.
 - PORT: Escribimos el puerto que se va a usar para conectar a la API.
 - DATABASE_NAME: Escribimos el nombre de la base de datos en la cual vamos a acceder.
 - COLLECTION_NAME: Escribimos el nombre de la collection que nos va a permitir obtener los datos necesarios para nuestra API.
@@ -15,8 +23,8 @@ En este caso cambiamos el nombre del archivo llamado `.env copy` a `.env`, luego
 ## Rutas de la API REST: 
 Dentro del archivo `api.http` se van a encontrar rutas con las siguientes finalidades:
 - Ruta principal (Devuelve un mensaje de bienvenida a la API).
-- Mostrar todos los productos. También permite filtrar por categoria.
-- Mostrar los productos de cierta categoria.
+- Mostrar todos los productos. También permite filtrar por categoría.
+- Mostrar los productos de cierta categoría.
 - Mostrar una lista de todas las categorías disponibles.
 - Mostrar un producto por su ID.
 - Crear un nuevo producto.
