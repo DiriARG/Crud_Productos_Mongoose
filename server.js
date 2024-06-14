@@ -42,7 +42,7 @@ app.get("/productos", async (req, res) => {
   }
 });
 
-//Devuelve una lista de todas las categorías disponibles. 
+//Devuelve una lista de todas las categorías disponibles.
 app.get("/productos/categorias", async (req, res) => {
   try {
     //Obtenemos todos los productos desde la BD.
