@@ -5,11 +5,14 @@ En este ejercicio se realiza una API REST utilizando Express JS y Mongoose para 
 Matías Di Risio 👍 
 - https://github.com/DiriARG
 
-## Tabla de contenidos
+## Tabla de contenidos:
 - [Previo a iniciar](#previo-a-iniciar)
 - [Iniciando el proyecto](#iniciando-el-proyecto)
 - [Configuramos el archivo .env (Environment Variables)](#configuramos-el-archivo-env-environment-variables)
+- [Estructura del proyecto](#estructura-del-proyecto)
+- [Descripción de archivos](#descripción-de-archivos)
 - [Rutas de la API REST](#rutas-de-la-api-rest)
+- [Ejemplos de uso](#ejemplos-de-uso)
 
 ## Previo a iniciar:
 - Debemos crear una nueva base de datos en MongoDB Compass.
@@ -51,7 +54,7 @@ Así será la estructura que encontraremos en nuestro editor de código fuente, 
 - **/package-lock.json**: Archivo que asegura la reproducibilidad y consistencia de las instalaciones de paquetes en el proyecto con Node.js.
 - **/productos.json**: Archivo de formato JSON que contiene los productos tecnológicos que vamos a utilizar en nuestra BD.
 - **/server.js**: Archivo principal de la aplicación Node.js donde se define toda la lógica de rutas y la conexión a la base de datos.
-- **/README.md**: Archivo guía para poder entender y comenzar con este proyecto.
+- **/README.md**: Archivo guía para poder entender y comenzar a trabajar con este proyecto.
 
 ## Rutas de la API REST:
 Dentro del archivo `api.http` se van a encontrar rutas con las siguientes finalidades:
@@ -69,5 +72,70 @@ Dentro del archivo `api.http` se van a encontrar rutas con las siguientes finali
 | GET | "/productos/importes/menor/:importe" | Mostrar todos los productos con un importe menor al especificado. |
 | GET | "/productos/nombre/:nombre" | Mostrar los productos que coinciden con el nombre especificado (búsqueda parcial). |
 | GET | "/productos/rango/:min/:max" | Mostrar los productos cuyo importe esté dentro del rango especificado. |
+
+## Ejemplos de uso:
+Estas acciones se realizan en el archivo `api.http`: 
+- **GET**: Muestra todos los productos.
+```json
+
+GET http://localhost:3000/productos
+
+```
+Mostrar los productos de cierta categoria.
+```json
+
+GET http://localhost:3000/productos?categoria=portátil
+
+```
+
+- **POST**: Crear un nuevo producto.
+```json
+
+POST http://localhost:3000/productos
+content-type: application/json
+
+{
+    "id": 18,
+    "nombre": "Auriculares Fiio F3",
+    "importe": 10000,
+    "categoria": "Accesorios"
+    
+}
+
+```
+- **PATCH**: Actualizar parcialmente un producto por su ID.
+```json
+
+PATCH http://localhost:3000/productos/6669dc59498e236b98803312
+content-type: application/json
+{
+    "id": 22,
+    "importe": 22000
+}
+
+```
+- **PUT**: Actualizar completamente un producto por su ID.
+```json
+
+PUT http://localhost:3000/productos/6669dc59498e236b98803312
+content-type: application/json
+
+{
+    "id": 23,
+    "nombre": "Monitor DELL",
+    "importe": 250000,
+    "categoria": "Periféricos"
+}
+
+```
+- **DELETE**: Eliminar un producto por su ID.
+```json
+
+DELETE http://localhost:3000/productos/6669ddc6ec7c301114547bb8
+
+```
+
+
+
 
 
