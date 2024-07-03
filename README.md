@@ -27,7 +27,7 @@ En este caso cambiamos el nombre del archivo llamado `.env copy` a `.env`, luego
 - COLLECTION_NAME: Escribimos el nombre de la collection que nos va a permitir obtener los datos necesarios para nuestra API.
 
 ## Estructura del proyecto:
-
+Así será la estructura que encontraremos en nuestro editor de código fuente, en mi caso, Visual Studio Code.
 ```plaintext
 /src
   - mongoose.js
@@ -41,6 +41,18 @@ En este caso cambiamos el nombre del archivo llamado `.env copy` a `.env`, luego
 /server.js
 /README.md
 ```
+## Descripción de archivos:
+- **/src**: Carpeta que contiene los archivos para configurar Mongoose:
+  - mongoose.js: Archivo que crea una conexión usando Mongoose.
+  - productoModel.js: Archivo que define un modelo de Mongoose para los productos tecnológicos.
+- **/.env**: Archivo que almacena las variables de entorno.
+- **/api.http**: Archivo que contiene todas las rutas de la API REST.
+- **/LICENSE**: Archivo que sirve para especificar los términos y condiciones bajo los cuales el software de este repositorio puede ser utilizado, copiado, modificado o distribuido por otras personas.
+- **/package-lock.json**: Archivo que asegura la reproducibilidad y consistencia de las instalaciones de paquetes en el proyecto con Node.js.
+- **/productos.json**: Archivo de formato JSON que contiene los productos tecnológicos que vamos a utilizar en nuestra BD.
+- **/server.js**: Archivo principal de la aplicación Node.js donde se define toda la lógica de rutas y la conexión a la base de datos.
+- **/README.md**: Archivo guía para poder entender y comenzar con este proyecto.
+
 ## Rutas de la API REST:
 Dentro del archivo `api.http` se van a encontrar rutas con las siguientes finalidades:
 | PETICIÓN | URL | DESCRIPCIÓN |
