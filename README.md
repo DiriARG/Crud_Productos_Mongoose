@@ -1,11 +1,11 @@
 # Actividad: CRUD de productos con Mongoose 🧐
 En este ejercicio se realiza una API REST utilizando Express JS y Mongoose para gestionar una colección de productos tecnológicos. La API permite realizar operaciones CRUD (Crear, Leer, Actualizar y Borrar) sobre los productos.
 
-## Desarrollador:
+## Desarrollador 👨‍💻:
 Matías Di Risio 👍 
 - https://github.com/DiriARG
 
-## Tabla de contenidos:
+## Tabla de contenidos 📚:
 - [Previo a iniciar](#previo-a-iniciar)
 - [Iniciando el proyecto](#iniciando-el-proyecto)
 - [Configuramos el archivo .env (Environment Variables)](#configuramos-el-archivo-env-environment-variables)
@@ -13,23 +13,24 @@ Matías Di Risio 👍
 - [Descripción de archivos](#descripción-de-archivos)
 - [Rutas de la API REST](#rutas-de-la-api-rest)
 - [Ejemplos de uso](#ejemplos-de-uso)
+- [Recursos](#recursos-)
 
-## Previo a iniciar:
+## Previo a iniciar 🕒:
 - Debemos crear una nueva base de datos en MongoDB Compass.
 - Luego importaremos el archivo .json llamado "productos.json" en nuestra base de datos haciendo click a "ADD DATA" --> "Import JSON or CSV file".
 
-## Iniciando el proyecto:
+## Iniciando el proyecto 🚀:
 - Abrimos la terminal e inicializamos un nuevo proyecto con `npm init -y`.
 - Luego instalamos las dependencias necesarias: Express JS (Entorno para desarrollar la API), Mongoose (Biblioteca de modelado de objetos para MongoDB y Node.js) y Morgan (Middleware de registro de solicitudes HTTP); `npm i express mongoose morgan`.
 
-## Configuramos el archivo .env (Environment Variables):
+## Configuramos el archivo .env (Environment Variables) ⚙️:
 En este caso cambiamos el nombre del archivo llamado `.env copy` a `.env`, luego modificamos su contenido:
 - MONGODB_URLSTRING: Copiamos la cadena de conexión desde la pagina de MongoDB o propiamente en el MongoDB Compass.
 - PORT: Escribimos el puerto que se va a usar para conectar a la API.
 - DATABASE_NAME: Escribimos el nombre de la base de datos en la cual vamos a acceder.
 - COLLECTION_NAME: Escribimos el nombre de la collection que nos va a permitir obtener los datos necesarios para nuestra API.
 
-## Estructura del proyecto:
+## Estructura del proyecto 📂:
 Así será la estructura que encontraremos en nuestro editor de código fuente, en mi caso, Visual Studio Code.
 ```plaintext
 /src
@@ -44,7 +45,7 @@ Así será la estructura que encontraremos en nuestro editor de código fuente, 
 /server.js
 /README.md
 ```
-## Descripción de archivos:
+## Descripción de archivos 📄:
 - **/src**: Carpeta que contiene los archivos para configurar Mongoose:
   - mongoose.js: Archivo que crea una conexión usando Mongoose.
   - productoModel.js: Archivo que define un modelo de Mongoose para los productos tecnológicos.
@@ -56,7 +57,7 @@ Así será la estructura que encontraremos en nuestro editor de código fuente, 
 - **/server.js**: Archivo principal de la aplicación Node.js donde se define toda la lógica de rutas y la conexión a la base de datos.
 - **/README.md**: Archivo guía para poder entender y comenzar a trabajar con este proyecto.
 
-## Rutas de la API REST:
+## Rutas de la API REST 🛤️:
 Dentro del archivo `api.http` se van a encontrar rutas con las siguientes finalidades:
 | PETICIÓN | URL | DESCRIPCIÓN |
 |:--------:|-----|-------------|
@@ -73,7 +74,7 @@ Dentro del archivo `api.http` se van a encontrar rutas con las siguientes finali
 | GET | "/productos/nombre/:nombre" | Mostrar los productos que coinciden con el nombre especificado (búsqueda parcial). |
 | GET | "/productos/rango/:min/:max" | Mostrar los productos cuyo importe esté dentro del rango especificado. |
 
-## Ejemplos de uso:
+## Ejemplos de uso 🧪:
 Estas acciones se realizan en el archivo `api.http`: 
 - **GET**: Muestra todos los productos.
 ```json
@@ -81,7 +82,7 @@ Estas acciones se realizan en el archivo `api.http`:
 GET http://localhost:3000/productos
 
 ```
-Mostrar los productos de cierta categoria.
+Mostrar los productos de cierta categoría.
 ```json
 
 GET http://localhost:3000/productos?categoria=portátil
@@ -134,6 +135,13 @@ content-type: application/json
 DELETE http://localhost:3000/productos/6669ddc6ec7c301114547bb8
 
 ```
+
+## Recursos 🧰 
+Aquí encontrarás enlaces útiles para aprender más sobre las tecnologías utilizadas en este proyecto:
+- Node.js: [Node.js](https://nodejs.org/)
+- Express: [Express](https://expressjs.com/)
+- Mongoose: [Mongoose](https://mongoosejs.com/)
+- Morgan: [Morgan](https://www.npmjs.com/package/morgan)
 
 
 
