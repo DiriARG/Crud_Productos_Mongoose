@@ -6,21 +6,29 @@ Matías Di Risio 👍
 - https://github.com/DiriARG
 
 ## Tabla de contenidos 📚:
-- [Previo a iniciar](#previo-a-iniciar)
-- [Iniciando el proyecto](#iniciando-el-proyecto)
-- [Configuramos el archivo .env (Environment Variables)](#configuramos-el-archivo-env-environment-variables)
-- [Estructura del proyecto](#estructura-del-proyecto)
-- [Descripción de archivos](#descripción-de-archivos)
-- [Rutas de la API REST](#rutas-de-la-api-rest)
-- [Ejemplos de uso](#ejemplos-de-uso)
+- [Instalación](#instalación-)
+- [Previo a iniciar](#previo-a-iniciar-)
+- [Iniciando el proyecto](#iniciando-el-proyecto-)
+- [Configuramos el archivo .env (Environment Variables)](#configuramos-el-archivo-env-environment-variables-%EF%B8%8F)
+- [Estructura del proyecto](#estructura-del-proyecto-)
+- [Descripción de archivos](#descripción-de-archivos-)
+- [Rutas de la API REST](#rutas-de-la-api-rest-%EF%B8%8F)
+- [Ejemplos de uso](#ejemplos-de-uso-)
 - [Recursos](#recursos-)
+
+## Instalación 📥:
+1. **Fork** el repositorio desde [aquí](https://github.com/DiriARG/Crud_Productos_Mongoose.git).
+2. **Clona** tu fork en tu máquina local:
+```bash
+git clone https://github.com/tu-usuario/tu-repositorio-fork.git
+```
 
 ## Previo a iniciar 🕒:
 - Debemos crear una nueva base de datos en MongoDB Compass.
 - Luego importaremos el archivo .json llamado "productos.json" en nuestra base de datos haciendo click a "ADD DATA" --> "Import JSON or CSV file".
 
-## Iniciando el proyecto 🚀:
-- Abrimos la terminal e inicializamos un nuevo proyecto con `npm init -y`.
+## Iniciando el proyecto 🚀: 
+- Abrimos la terminal e inicializamos un nuevo proyecto con `npm init -y`. 
 - Luego instalamos las dependencias necesarias: Express JS (Entorno para desarrollar la API), Mongoose (Biblioteca de modelado de objetos para MongoDB y Node.js) y Morgan (Middleware de registro de solicitudes HTTP); `npm i express mongoose morgan`.
 
 ## Configuramos el archivo .env (Environment Variables) ⚙️:
