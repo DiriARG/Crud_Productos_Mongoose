@@ -17,17 +17,31 @@ Matías Di Risio 👍
 - [Recursos](#recursos-)
 
 ## Instalación 📥:
-1. **Fork** el repositorio desde [aquí](https://github.com/DiriARG/Crud_Productos_Mongoose.git).
+1. **Fork** el repositorio desde [aquí](https://github.com/DiriARG/Crud_Productos_Mongoose/fork).
 2. **Clona** tu fork en tu máquina local:
 ```bash
 git clone https://github.com/tu-usuario/tu-repositorio-fork.git
 ```
-
+3. Ahora **abre** Visual Studio Code y la carpeta correspondiente (Crud_Productos_Mongoose).
+4. **Inicia** una nueva terminal y escribe `npm install`, este comando en un directorio que ya contiene el archivo `package.json` genera que npm instale las dependencias especificadas en ese `package.json` y actualice el `package-lock.json` con las versiones exactas de esas dependencias.
+- Si seguiste estas instrucciones de instalación mediante forkear el repositorio y clonandolo a tu máquina local, evita el apartado [Iniciando el proyecto](#iniciando-el-proyecto-), ya que esta orientado a las personas que simplemente han descargado algunos archivos individuales del proyecto.
+   
 ## Previo a iniciar 🕒:
 - Debemos crear una nueva base de datos en MongoDB Compass.
 - Luego importaremos el archivo .json llamado "productos.json" en nuestra base de datos haciendo click a "ADD DATA" --> "Import JSON or CSV file".
 
 ## Iniciando el proyecto 🚀: 
+Este apartado esta orientado a las personas que simplemente quieran descargar los archivos individualmente sin forkear el repositorio, por lo tanto, los archivos que son necesarios para el correcto funcionamiento de la API REST son los siguientes: 
+```plaintext
+/src
+  - mongoose.js
+  - productoModel.js
+/.env-copy
+/api.http
+/productos.json
+/server.js
+```
+Teniendo dicha estructura del proyecto, proseguimos con: 
 - Abrimos la terminal e inicializamos un nuevo proyecto con `npm init -y`. 
 - Luego instalamos las dependencias necesarias: Express JS (Entorno para desarrollar la API), Mongoose (Biblioteca de modelado de objetos para MongoDB y Node.js) y Morgan (Middleware de registro de solicitudes HTTP); `npm i express mongoose morgan`.
 
@@ -39,7 +53,7 @@ En este caso cambiamos el nombre del archivo llamado `.env copy` a `.env`, luego
 - COLLECTION_NAME: Escribimos el nombre de la collection que nos va a permitir obtener los datos necesarios para nuestra API.
 
 ## Estructura del proyecto 📂:
-Así será la estructura que encontraremos en nuestro editor de código fuente, en mi caso, Visual Studio Code.
+Así será la estructura que encontraremos en nuestro editor de código fuente, en mi caso, Visual Studio Code (puede variar en caso de haber instalado los archivos de forma individual).
 ```plaintext
 /src
   - mongoose.js
@@ -146,6 +160,7 @@ DELETE http://localhost:3000/productos/6669ddc6ec7c301114547bb8
 
 ## Recursos 🧰 
 Aquí encontrarás enlaces útiles para aprender más sobre las tecnologías utilizadas en este proyecto:
+- Visual Studio Code: [Visual Studio Code](https://code.visualstudio.com/)
 - Node.js: [Node.js](https://nodejs.org/)
 - Express: [Express](https://expressjs.com/)
 - Mongoose: [Mongoose](https://mongoosejs.com/)
