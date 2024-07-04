@@ -80,7 +80,8 @@ Así será la estructura que encontraremos en nuestro editor de código fuente, 
 - **/README.md**: Archivo guía para poder entender y comenzar a trabajar con este proyecto.
 
 ## Rutas de la API REST 🛤️:
-Dentro del archivo `api.http` se van a encontrar rutas con las siguientes finalidades:
+Para poder comprobar la funcionalidad de cada ruta de la API vamos a utilizar la extensión `REST Client` del marketplace de Visual Studio Code o cualquier otra herramienta que tenga como finalidad el testeo de una API, como puede ser `Postman`. Los links de descarga se encuentran en [Recursos](#recursos-).<br>
+Dentro del archivo `api.http` (archivo funcional si utilizamos `REST Client`) se van a encontrar rutas con las siguientes finalidades:
 | PETICIÓN | URL | DESCRIPCIÓN |
 |:--------:|-----|-------------|
 | GET | "/" | Ruta principal (Devuelve un mensaje de bienvenida a la API). |
@@ -165,6 +166,8 @@ Aquí encontrarás enlaces útiles para aprender más sobre las tecnologías uti
 - Express: [Express](https://expressjs.com/)
 - Mongoose: [Mongoose](https://mongoosejs.com/)
 - Morgan: [Morgan](https://www.npmjs.com/package/morgan)
+- REST Client: [REST Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client)
+- Postman: [Postman](https://www.postman.com/)
 
 
 
