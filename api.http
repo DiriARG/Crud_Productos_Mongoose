@@ -1,59 +1,61 @@
-### Ruta principal (Devuelve un mensaje de bienvenida a la API).
+###Ruta principal (Devuelve un mensaje de bienvenida a la API).
 http://localhost:3000
 
-### Devuelve todos los productos. Permite filtrar por categoria.
+###Devuelve todos los productos. Permite filtrar por categoría (GET DE ABAJO).
 GET http://localhost:3000/productos
 
-### Mostrar los productos de cierta categoria.
+###Mostrar los productos de cierta categoría.
 GET http://localhost:3000/productos?categoria=portátil
 
-### Devuelve una lista de todas las categorías disponibles.
+###Devuelve una lista de todas las categorías disponibles.
 GET http://localhost:3000/productos/categorias
 
-### Devuelve un producto por su ID.
-GET http://localhost:3000/productos/6669cc9a3d8d1c915de280c8
+###Devuelve un producto por su ID.
+GET http://localhost:3000/productos/6669dc59498e236b98803312
 
-### Crea un nuevo producto.
+###Crea un nuevo producto.
 POST http://localhost:3000/productos
 content-type: application/json
 
 {
-    "id": 18,
-    "nombre": "Auriculares Fiio F3",
+    "id": 22,
+    "nombre": "Auriculares Fiio F10",
     "importe": 10000,
     "categoria": "Accesorios"
     
 }
 
-### Elimina un producto por su ID.
-DELETE http://localhost:3000/productos/6669ddc6ec7c301114547bb8
+###Elimina un producto por su ID.
+DELETE http://localhost:3000/productos/668843273c20244f3336cafc
 
-### Actualiza parcialmente un producto por su ID.   
+###Actualiza parcialmente un producto por su ID.   
 PATCH http://localhost:3000/productos/6669dc59498e236b98803312
 content-type: application/json
+
 {
-    "id": 22,
-    "importe": 22000
+    "importe": 44000
 }
 
-### Actualiza completamente un producto por su ID.
+###Actualiza completamente un producto por su ID.
 PUT http://localhost:3000/productos/6669dc59498e236b98803312
 content-type: application/json
 
 {
     "id": 23,
+    "nombre": "Auriculares Fiio F3",
     "importe": 23000,
+    "categoria": "Accesorios"
 }
 
-### Devuelve los productos con un importe mayor al especificado.
-GET http://localhost:3000/productos/importes/mayor/744444.5
+###Devuelve los productos con un importe mayor al especificado.
+GET http://localhost:3000/productos/importes/mayor/1000000
 
-### Devuelve los productos con un importe menor al especificado.
-GET http://localhost:3000/productos/importes/menor/550.5
+###Devuelve los productos con un importe menor al especificado.
+GET http://localhost:3000/productos/importes/menor/400
 
-### Devuelve los productos que coinciden con el nombre especificado (búsqueda parcial).
+###Devuelve los productos que coinciden con el nombre especificado (búsqueda parcial).
 GET http://localhost:3000/productos/nombre/auri
 
-### Devuelve los productos cuyo importe esté dentro del rango especificado.
-GET http://localhost:3000/productos/rango/1500/20000
+###Devuelve los productos cuyo importe esté dentro del rango especificado.
+GET http://localhost:3000/productos/rango/500/1000
 
