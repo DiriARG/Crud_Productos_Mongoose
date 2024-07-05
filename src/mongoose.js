@@ -15,5 +15,5 @@ const connectDB = () => {
     .catch((err) => console.log("Error al conectarse : ", err));
 };
 
-//Exportamos el modulo de conexion.
+//Exportamos el modulo de conexión.
 module.exports = connectDB;
