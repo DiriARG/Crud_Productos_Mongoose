@@ -180,7 +180,7 @@ app.get("/productos/importes/mayor/:importe", async (req, res) => {
   const { importe } = req.params;
 
   try {
-    // Convertir el precio (Array/String) a float por si el usuario digita un número con coma. Siempre lo que ingrese el usuario va a ser un string, por eso se lo parsea en este caso.
+    //Convertir el precio (Array/String) a float por si el usuario digita un número con coma. Siempre lo que ingrese el usuario va a ser un string, por eso se lo parsea en este caso.
     const precioNumerico = parseFloat(importe);
     const productos = await Producto.find({ importe: { $gt: precioNumerico } });
     //Se coloca ".lenght mayor a 0" para que compruebe si el array tiene más de un elemento, en este caso, al colocarle "!" estamos negando esa acción.
