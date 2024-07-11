@@ -265,6 +265,11 @@ app.get("/productos/rango/:min/:max", async (req, res) => {
   }
 });
 
+//Middleware para manejar rutas no encontradas.
+app.use((req, res) => {
+  res.status(404).json({ error: "Ruta no encontrada 🚫❗" });
+});
+
 //Inicializamos el servidor.
 app.listen(port, () => {
   console.log(`Servidor escuchando en: http://localhost:${port}`);
