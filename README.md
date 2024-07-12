@@ -2,8 +2,12 @@
 En este ejercicio se realiza una API REST utilizando Express JS y Mongoose para gestionar una colección de productos tecnológicos. La API permite realizar operaciones CRUD (Crear, Leer, Actualizar y Borrar) sobre los productos.
 
 ## Desarrollador 👨‍💻:
-Matías Di Risio 👍 
-- https://github.com/DiriARG
+- **Desarrollador:** Matías Di Risio 👍 
+- **GitHub:** [DiriARG](https://github.com/DiriARG)
+
+## Profesor 👨‍🏫 :
+- **Profesor:** Fabio D. Argañaraz A.
+- **GitHub:** [Fabio D. Argañaraz A.](https://github.com/FabioDrizZt)
 
 ## Tabla de contenidos 📚:
 - [Instalación](#instalación-)
