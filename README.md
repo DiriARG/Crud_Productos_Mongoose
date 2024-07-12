@@ -31,6 +31,7 @@ git clone https://github.com/tu-usuario/tu-repositorio-fork.git
 - Si seguiste estas instrucciones de instalación mediante forkear el repositorio y clonandolo a tu máquina local, evita el apartado [Iniciando el proyecto](#iniciando-el-proyecto-), ya que esta orientado a las personas que simplemente han descargado algunos archivos individuales del proyecto.
    
 ## Previo a iniciar 🕒:
+- Crea una cuenta en MongoDB y descarga e instala Compass, que es una herramienta gráfica interactiva para consultar, optimizar y analizar datos en MongoDB. Links útiles en [Recursos](#recursos-).
 - Debemos crear una nueva base de datos en MongoDB Compass.
 - Luego importaremos el archivo .json llamado "productos.json" en nuestra base de datos haciendo click a "ADD DATA" --> "Import JSON or CSV file".
 
@@ -168,6 +169,8 @@ DELETE http://localhost:3000/productos/6669ddc6ec7c301114547bb8
 ## Recursos 🧰 
 Aquí encontrarás enlaces útiles para aprender más sobre las tecnologías utilizadas en este proyecto:
 - Visual Studio Code: [Visual Studio Code](https://code.visualstudio.com/)
+- MongoDB: [MongoDB](https://www.mongodb.com/es)
+- MongoDBCompass: [MongoDBCompass](https://www.mongodb.com/products/tools/compass)
 - Node.js: [Node.js](https://nodejs.org/)
 - Express: [Express](https://expressjs.com/)
 - Mongoose: [Mongoose](https://mongoosejs.com/)
