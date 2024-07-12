@@ -78,7 +78,7 @@ Así será la estructura que encontraremos en nuestro editor de código fuente, 
   - productoModel.js: Archivo que define un modelo de Mongoose para los productos tecnológicos.
 - **/.env**: Archivo que almacena las variables de entorno.
 - **/api.http**: Archivo que contiene todas las rutas de la API REST.
-- **/Enunciado.md**: Archivo que fue brindado por el profesor de la diplomatura. Contiene la consigna del ejercicio a realizar junto a otros detalles que se deben cumplir para la resolución de la actividad. 
+- **/Enunciado.md**: Archivo que fue brindado por el profesor de la diplomatura. Contiene la consigna del ejercicio a realizar junto a otros detalles que se deben cumplir para la correcta resolución de la actividad. 
 - **/LICENSE**: Archivo que sirve para especificar los términos y condiciones bajo los cuales el software de este repositorio puede ser utilizado, copiado, modificado o distribuido por otras personas.
 - **/package-lock.json**: Archivo que asegura la reproducibilidad y consistencia de las instalaciones de paquetes en el proyecto con Node.js.
 - **/productos.json**: Archivo de formato JSON que contiene los productos tecnológicos que vamos a utilizar en nuestra BD.
