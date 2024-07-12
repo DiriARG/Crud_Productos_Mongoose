@@ -31,7 +31,9 @@ git clone https://github.com/tu-usuario/tu-repositorio-fork.git
 - Si seguiste estas instrucciones de instalación mediante forkear el repositorio y clonandolo a tu máquina local, evita el apartado [Iniciando el proyecto](#iniciando-el-proyecto-), ya que esta orientado a las personas que simplemente han descargado algunos archivos individuales del proyecto.
    
 ## Previo a iniciar 🕒:
-- Crea una cuenta en MongoDB y descarga e instala Compass, que es una herramienta gráfica interactiva para consultar, optimizar y analizar datos en MongoDB. Links útiles en [Recursos](#recursos-).
+- Descarga e instala Visual Studio Code. Es el editor de código recomendado para abordar este proyecto.
+- Descarga e instala Node.js, un entorno de ejecución de JavaScript de código abierto y multiplataforma que permite crear servidores, aplicaciones web, APIs, herramientas de línea de comandos y scripts.
+- Crea una cuenta en MongoDB y descarga e instala Compass, que es una herramienta gráfica interactiva para consultar, optimizar y analizar datos en MongoDB. 
 - Debemos crear una nueva base de datos en MongoDB Compass.
 - Luego importaremos el archivo .json llamado "productos.json" en nuestra base de datos haciendo click a "ADD DATA" --> "Import JSON or CSV file".
 
@@ -58,7 +60,7 @@ En este caso cambiamos el nombre del archivo llamado `.env copy` a `.env`, luego
 - COLLECTION_NAME: Escribimos el nombre de la collection que nos va a permitir obtener los datos necesarios para nuestra API.
 
 ## Estructura del proyecto 📂:
-Así será la estructura que encontraremos en nuestro editor de código fuente, en mi caso, Visual Studio Code (puede variar en caso de haber instalado los archivos de forma individual).
+Así será la estructura que encontraremos en nuestro editor de código fuente, en mi caso, Visual Studio Code (puede variar la estructura en caso de haber instalado los archivos de forma individual).
 ```plaintext
 /src
   - mongoose.js
@@ -169,9 +171,9 @@ DELETE http://localhost:3000/productos/6669ddc6ec7c301114547bb8
 ## Recursos 🧰 
 Aquí encontrarás enlaces útiles para aprender más sobre las tecnologías utilizadas en este proyecto:
 - Visual Studio Code: [Visual Studio Code](https://code.visualstudio.com/)
+- Node.js: [Node.js](https://nodejs.org/)
 - MongoDB: [MongoDB](https://www.mongodb.com/es)
 - MongoDBCompass: [MongoDBCompass](https://www.mongodb.com/products/tools/compass)
-- Node.js: [Node.js](https://nodejs.org/)
 - Express: [Express](https://expressjs.com/)
 - Mongoose: [Mongoose](https://mongoosejs.com/)
 - Morgan: [Morgan](https://www.npmjs.com/package/morgan)
